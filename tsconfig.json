@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "jsx": "react",
+    "strict": true,
+    "rootDir": "src",
+    "outDir": "lib",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
+    ],
+    "allowJs": false,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.spec.ts"
+  ]
+}
