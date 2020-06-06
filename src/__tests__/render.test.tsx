@@ -3,6 +3,13 @@ import { Node } from '@ts-graphviz/react';
 import dedent from 'ts-dedent';
 import { renderToHTML, register } from '../render';
 
+jest.mock('@ts-graphviz/node', () => ({
+  renderDot() {
+    // eslint-disable-next-line no-buffer-constructor
+    return new Buffer('test');
+  },
+}));
+
 describe('Graphviz', () => {
   describe('renderToHTML', () => {
     test('Digraph', () => {
