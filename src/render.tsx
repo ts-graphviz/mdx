@@ -9,19 +9,19 @@ import {
   GraphvizMDXProviderComponents,
 } from './contexts/GraphvizMDXProviderComponents';
 
-type BaseOptions = {
+export type BaseOptions = {
   components?: MDXProviderComponents;
 };
 
-let graphvizConponents: GraphvizMDXProviderComponents = { Graph, Digraph, Subgraph, Node, Edge, ClusterPortal };
+let graphvizComponents: GraphvizMDXProviderComponents = { Graph, Digraph, Subgraph, Node, Edge, ClusterPortal };
 
 export function register(components: GraphvizMDXProviderComponents): void {
-  graphvizConponents = Object.assign(graphvizConponents, components);
+  graphvizComponents = Object.assign(graphvizComponents, components);
 }
 
 export function renderToHTML(mdx: string, { components }: BaseOptions = {}): string {
   return renderToString(
-    <GraphvizMDXProviderComponentsContext.Provider value={graphvizConponents}>
+    <GraphvizMDXProviderComponentsContext.Provider value={graphvizComponents}>
       <MDXProvider components={{ ...components, Graphviz }}>
         <MDX>{mdx}</MDX>
       </MDXProvider>

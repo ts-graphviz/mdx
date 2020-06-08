@@ -22,6 +22,10 @@
     "declaration": true,
     "experimentalDecorators": true
   },
+  "include": [
+    "src",
+    "types"
+  ],
   "exclude": [
     "**/*.test.ts",
     "**/*.test.tsx",
