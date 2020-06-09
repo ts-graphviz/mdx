@@ -1,3 +1,10 @@
+[![NodeCI](https://github.com/ts-graphviz/mdx/workflows/NodeCI/badge.svg)](https://github.com/kamiazya/ts-graphviz/actions?workflow=NodeCI)
+[![npm version](https://badge.fury.io/js/%40ts-graphviz%2Fmdx.svg)](https://badge.fury.io/js/%40ts-graphviz%2Fmdx)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 # @ts-graphviz/mdx
 
 Embed the Graphviz image in MDX.
@@ -22,12 +29,12 @@ Render MDX to HTML and embed the diagram in Graphviz as an image.
 Refer to [@ts-graphviz/react](https://github.com/ts-graphviz/react) project for component specifications.
 
 ```typescript
-import { renderToHTML } from '@ts-graphviz/mdx';
+import GraphvizMDX from '@ts-graphviz/mdx';
 
 const mdx = `
-# Sample
+# Example
 
-This is sample MDX.
+This is example MDX.
 
 <Graphviz>
   <Digraph>
@@ -39,7 +46,7 @@ This is sample MDX.
   </Digraph>
 </Graphviz>
 `;
-console.log(renderToHTML(mdx));
+console.log(GraphvizMDX.renderToHTML(mdx));
 ```
 
 ```html
@@ -52,18 +59,21 @@ console.log(renderToHTML(mdx));
 
 ```typescript
 import React, { FC } from 'react';
-import { renderToHTML, register } from '@ts-graphviz/mdx';
+import GraphvizMDX from '@ts-graphviz/mdx';
 import { Node } from '@ts-graphviz/react';
 
 const MyNode: FC<{ id: string }> = ({ id }) => {
   return <Node id={id} fontcolor="red" />;
 };
-register({ MyNode });
+GraphvizMDX.use({
+  // register components that can be used within <Graphviz /> component.
+  graphviz: { MyNode },
+});
 
 const mdx = `
-# Test
+# Example
 
-This is test MDX.
+This is example MDX.
 
 <Graphviz>
   <Digraph>
@@ -75,7 +85,7 @@ This is test MDX.
   </Digraph>
 </Graphviz>
 `;
-renderToHTML(mdx);
+GraphvizMDX.renderToHTML(mdx);
 ```
 
 ## See Also

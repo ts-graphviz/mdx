@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { FC, ReactNode, Children, isValidElement, ReactElement } from 'react';
-import { GraphvizMDXProviderComponents } from '../contexts/GraphvizMDXProviderComponents';
+import { Components } from '../types';
 
 type MDXReactElement = {
   $$typeof?: symbol;
@@ -18,7 +18,7 @@ export class MDXNodeWalker {
 
   private readonly components: Map<string, FC<any>> = new Map();
 
-  constructor(components: GraphvizMDXProviderComponents) {
+  constructor(components: Components) {
     this.components = new Map(Object.entries(components));
     this.set = new Set(Object.values(components));
   }

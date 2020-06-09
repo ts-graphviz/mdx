@@ -6,18 +6,19 @@ import imageDataUri from 'image-data-uri';
 import { MDXNodeWalker } from '../models/mdx-node-walker';
 import { useGraphvizMDXProviderComponents } from '../hooks/graphviz-mdx-provider-components';
 
-type Props = {
+export type GraphvizProps = {
   alt?: string;
   children: ReactElement;
 };
 
-export const Graphviz: FC<Props> = ({ alt, children }) => {
+export const Graphviz: FC<GraphvizProps> = ({ alt, children }) => {
   const components = useGraphvizMDXProviderComponents();
   const worker = new MDXNodeWalker(components);
   const node = worker.walk(children);
   if (isValidElement(node)) {
     const format = 'png';
     const dot = renderToDot(node);
+    console.log(dot);
     const buffer = renderDot(dot, { format });
     const src = imageDataUri.encode(buffer, format);
     // eslint-disable-next-line jsx-a11y/alt-text

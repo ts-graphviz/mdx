@@ -1,9 +1,7 @@
 import { useContext } from 'react';
-import {
-  GraphvizMDXProviderComponentsContext,
-  GraphvizMDXProviderComponents,
-} from '../contexts/GraphvizMDXProviderComponents';
+import { Components } from '../types';
+import { GraphvizMDXProviderComponentsContext } from '../contexts/GraphvizMDXProviderComponents';
 
-export function useGraphvizMDXProviderComponents(): GraphvizMDXProviderComponents {
+export function useGraphvizMDXProviderComponents(): Components {
   return useContext(GraphvizMDXProviderComponentsContext);
 }

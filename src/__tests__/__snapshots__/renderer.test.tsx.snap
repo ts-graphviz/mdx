@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Graphviz register custom component 1`] = `
+exports[`Renderer register custom component 1`] = `
 <h1>
   Test
 </h1>
@@ -10,7 +10,7 @@ exports[`Graphviz register custom component 1`] = `
 <img src="data:image/png;base64,dGVzdA==">
 `;
 
-exports[`Graphviz renderToHTML Digraph 1`] = `
+exports[`Renderer renderToHTML Digraph 1`] = `
 <h1>
   Test
 </h1>
@@ -20,7 +20,7 @@ exports[`Graphviz renderToHTML Digraph 1`] = `
 <img src="data:image/png;base64,dGVzdA==">
 `;
 
-exports[`Graphviz renderToHTML Graph 1`] = `
+exports[`Renderer renderToHTML Graph 1`] = `
 <h1>
   Test
 </h1>

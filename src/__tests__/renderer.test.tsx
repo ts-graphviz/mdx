@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Node } from '@ts-graphviz/react';
 import dedent from 'ts-dedent';
-import { renderToHTML, register } from '../render';
+import { Renderer } from '../renderer';
 
 jest.mock('@ts-graphviz/node', () => ({
   renderDot() {
@@ -10,7 +10,11 @@ jest.mock('@ts-graphviz/node', () => ({
   },
 }));
 
-describe('Graphviz', () => {
+describe('Renderer', () => {
+  let renderer: Renderer;
+  beforeEach(() => {
+    renderer = new Renderer();
+  });
   describe('renderToHTML', () => {
     test('Digraph', () => {
       const mdx = dedent`
@@ -28,7 +32,7 @@ describe('Graphviz', () => {
         </Digraph>
       </Graphviz>
       `;
-      const html = renderToHTML(mdx);
+      const html = renderer.renderToHTML(mdx);
       expect(html).toMatchSnapshot();
     });
 
@@ -50,7 +54,7 @@ describe('Graphviz', () => {
         </Graph>
       </Graphviz>
       `;
-      const html = renderToHTML(mdx);
+      const html = renderer.renderToHTML(mdx);
       expect(html).toMatchSnapshot();
     });
   });
@@ -60,7 +64,9 @@ describe('Graphviz', () => {
     const TestNode: FC<{ id: string }> = ({ id }) => {
       return <Node id={id} fontcolor="red" />;
     };
-    register({ TestNode });
+    renderer.use({
+      graphviz: { TestNode },
+    });
 
     const mdx = dedent`
     # Test
@@ -77,7 +83,7 @@ describe('Graphviz', () => {
       </Digraph>
     </Graphviz>
     `;
-    const html = renderToHTML(mdx);
+    const html = renderer.renderToHTML(mdx);
     expect(html).toMatchSnapshot();
   });
 });

@@ -1,5 +1,4 @@
-import { createContext, FC } from 'react';
+import { createContext } from 'react';
+import { Components } from '../types';
 
-export type GraphvizMDXProviderComponents = { [key: string]: FC<any> };
-
-export const GraphvizMDXProviderComponentsContext = createContext<GraphvizMDXProviderComponents>({});
+export const GraphvizMDXProviderComponentsContext = createContext<Components>({});
