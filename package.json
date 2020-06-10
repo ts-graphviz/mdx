@@ -24,10 +24,12 @@
     "@mdx-js/runtime": "^1.6.5",
     "@ts-graphviz/node": "^0.0.2",
     "@ts-graphviz/react": "^0.5.0",
-    "image-data-uri": "^2.0.1"
+    "image-data-uri": "^2.0.1",
+    "jsdom": "^16.2.2"
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
+    "@types/jsdom": "^16.2.3",
     "@types/mdx-js__react": "^1.5.2",
     "@types/node": "^14.0.4",
     "@types/prop-types": "^15.7.3",

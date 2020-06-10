@@ -7,7 +7,7 @@ exports[`Renderer register custom component 1`] = `
 <p>
   This is test MDX.
 </p>
-<img src="data:image/png;base64,dGVzdA==">
+<img src="data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8tLT4KCjxzdmcgd2lkdGg9IjE1MnB0IiBoZWlnaHQ9IjExNnB0IiB2aWV3Qm94PSIwLjAwIDAuMDAgMTUyLjQ0IDExNi4wMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzI=">
 `;
 
 exports[`Renderer renderToHTML Digraph 1`] = `
@@ -17,7 +17,7 @@ exports[`Renderer renderToHTML Digraph 1`] = `
 <p>
   This is test MDX.
 </p>
-<img src="data:image/png;base64,dGVzdA==">
+<img src="data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8tLT4KCjxzdmcgd2lkdGg9IjE1MnB0IiBoZWlnaHQ9IjExNnB0IiB2aWV3Qm94PSIwLjAwIDAuMDAgMTUyLjQ0IDExNi4wMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzI=">
 `;
 
 exports[`Renderer renderToHTML Graph 1`] = `
@@ -27,5 +27,5 @@ exports[`Renderer renderToHTML Graph 1`] = `
 <p>
   This is test MDX.
 </p>
-<img src="data:image/png;base64,dGVzdA==">
+<img src="data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8tLT4KCjxzdmcgd2lkdGg9IjE1MnB0IiBoZWlnaHQ9IjExNnB0IiB2aWV3Qm94PSIwLjAwIDAuMDAgMTUyLjQ0IDExNi4wMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzI=">
 `;
