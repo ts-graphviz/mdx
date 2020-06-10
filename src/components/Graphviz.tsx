@@ -18,7 +18,6 @@ export const Graphviz: FC<GraphvizProps> = ({ alt, children }) => {
   if (isValidElement(node)) {
     const format = 'png';
     const dot = renderToDot(node);
-    console.log(dot);
     const buffer = renderDot(dot, { format });
     const src = imageDataUri.encode(buffer, format);
     // eslint-disable-next-line jsx-a11y/alt-text
