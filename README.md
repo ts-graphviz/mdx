@@ -1,4 +1,4 @@
-[![NodeCI](https://github.com/ts-graphviz/mdx/workflows/NodeCI/badge.svg)](https://github.com/kamiazya/ts-graphviz/actions?workflow=NodeCI)
+[![NodeCI](https://github.com/ts-graphviz/mdx/workflows/NodeCI/badge.svg)](https://github.com/ts-graphviz/mdx/actions?workflow=NodeCI)
 [![npm version](https://badge.fury.io/js/%40ts-graphviz%2Fmdx.svg)](https://badge.fury.io/js/%40ts-graphviz%2Fmdx)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
